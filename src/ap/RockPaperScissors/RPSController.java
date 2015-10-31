@@ -12,6 +12,7 @@ public class RPSController {
 	Image rock = new Image(getClass().getResourceAsStream("rock.png"));
 	Image paper = new Image(getClass().getResourceAsStream("paper.png"));
 	Image scissors = new Image(getClass().getResourceAsStream("scissors.png"));
+	boolean gameStarted = false;
 	boolean rdyPlay1 = false;
 	boolean rdyPlay2 = false;
 	int roundNum = 0;
@@ -54,21 +55,23 @@ public class RPSController {
 
     @FXML
     void buttonClickListener() {
-    	if(textFieldP1Name.getText().equals(""))
-    	{
-    		textFieldP1Name.setText("Player 1");
-    	}
-    	if(textFieldP2Name.getText().equals(""))
-    	{
-    		textFieldP2Name.setText("Player 2");
-    	}
+	    	if(textFieldP1Name.getText().equals(""))
+	    	{
+	    		textFieldP1Name.setText("Player 1");
+	    	}
+	    	if(textFieldP2Name.getText().equals(""))
+	    	{
+	    		textFieldP2Name.setText("Player 2");
+	    	}
+	    	
+	    	labelRoundSummary.setText("ROUND " + ++roundNum);
+	    	textFieldP1Name.setEditable(false);
+	    	textFieldP2Name.setEditable(false);
+	    	buttonStartRound.setDisable(true);
+	    	rdyPlay1 = true;
+	    	rdyPlay2 = true;
     	
-    	textFieldP1Name.setEditable(false);
-    	textFieldP2Name.setEditable(false);
-    	rdyPlay1 = true;
-    	rdyPlay2 = true;
-    	labelRoundSummary.setText("ROUND " + ++roundNum);
-    	buttonStartRound.setDisable(true);
+    	gameStarted = true;
     }
     
     @FXML
