@@ -139,37 +139,37 @@ public class RPSController {
     		else if(labelP1Choice.getText().equals("ROCK") && labelP2Choice.getText().equals("SCISSORS"))
     		{
     			P1Points++;
-    			labelP1Points.setText("" + P1Points + " Points");
+    			labelP1Points.setText("" + P1Points);
     			labelRoundSummary.setText(textFieldP1Name.getText() + " WINS!");
     		}
     		else if(labelP1Choice.getText().equals("ROCK") && labelP2Choice.getText().equals("PAPER"))
     		{
     			P2Points++;
-    			labelP2Points.setText("" + P2Points + " Points");
+    			labelP2Points.setText("" + P2Points);
     			labelRoundSummary.setText(textFieldP2Name.getText() + " WINS!");
     		}
     		else if(labelP1Choice.getText().equals("SCISSORS") && labelP2Choice.getText().equals("ROCK"))
     		{
     			P2Points++;
-    			labelP2Points.setText("" + P2Points + " Points");
+    			labelP2Points.setText("" + P2Points);
     			labelRoundSummary.setText(textFieldP2Name.getText() + " WINS!");
     		}
     		else if(labelP1Choice.getText().equals("SCISSORS") && labelP2Choice.getText().equals("PAPER"))
     		{
     			P1Points++;
-    			labelP1Points.setText("" + P1Points + " Points");
+    			labelP1Points.setText("" + P1Points);
     			labelRoundSummary.setText(textFieldP1Name.getText() + " WINS!");
     		}
     		else if(labelP1Choice.getText().equals("PAPER") && labelP2Choice.getText().equals("SCISSORS"))
     		{
     			P2Points++;
-    			labelP2Points.setText("" + P2Points + " Points");
+    			labelP2Points.setText("" + P2Points);
     			labelRoundSummary.setText(textFieldP2Name.getText() + " WINS!");
     		}
     		else if(labelP1Choice.getText().equals("PAPER") && labelP2Choice.getText().equals("ROCK"))
     		{
     			P1Points++;
-    			labelP1Points.setText("" + P1Points + " Points");
+    			labelP1Points.setText("" + P1Points);
     			labelRoundSummary.setText(textFieldP1Name.getText() + " WINS!");
     		}
     		

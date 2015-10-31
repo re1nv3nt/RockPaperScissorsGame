@@ -9,8 +9,34 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#keyReleaseListener" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.RockPaperScissors.RPSController">
    <children>
-      <Pane layoutX="387.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #00B0EB;" />
-      <Pane layoutX="14.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #5CD65C;" />
+      <Label fx:id="labelP1Points" alignment="CENTER" layoutX="88.0" layoutY="54.0" prefHeight="53.0" prefWidth="53.0" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="labelP2Points" alignment="CENTER" layoutX="461.0" layoutY="54.0" prefHeight="53.0" prefWidth="53.0" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonStartRound" alignment="CENTER" layoutX="269.0" layoutY="23.0" mnemonicParsing="false" onAction="#buttonClickListener" prefHeight="30.0" prefWidth="63.0" text="START">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="387.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #00B0EB;">
+         <children>
+            <Label fx:id="labelP2Choice" alignment="CENTER" layoutY="128.0" prefHeight="17.0" prefWidth="200.0" text="P2 Choice" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children></Pane>
+      <Pane layoutX="14.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #5CD65C;">
+         <children>
+            <Label fx:id="labelP1Choice" alignment="CENTER" layoutY="128.0" prefHeight="17.0" prefWidth="200.0" text="P1 Choice" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children></Pane>
       <Pane layoutX="221.0" layoutY="125.0" prefHeight="150.0" prefWidth="159.0" style="-fx-background-color: #FFAD33;">
          <children>
             <Label fx:id="labelRoundSummary" alignment="CENTER" contentDisplay="CENTER" layoutY="67.0" prefHeight="17.0" prefWidth="159.0" text="ROUND WINNER" textAlignment="JUSTIFY">
@@ -20,30 +46,24 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="buttonStartRound" alignment="CENTER" layoutX="250.0" layoutY="13.0" mnemonicParsing="false" onAction="#buttonClickListener" prefHeight="47.0" prefWidth="100.0" text="Start Game">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
       <ImageView fx:id="imageP1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" visible="false" />
       <ImageView fx:id="imageP2" fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" visible="false">
          <rotationAxis>
             <Point3D y="1.0" />
          </rotationAxis></ImageView>
-      <TextField fx:id="textFieldP1Name" alignment="CENTER" layoutX="27.0" layoutY="21.0" promptText="Player 1 - Enter Name">
+      <TextField fx:id="textFieldP1Name" alignment="CENTER" layoutX="21.0" layoutY="23.0" promptText="Player 1 - Enter Name">
          <font>
-            <Font size="14.0" />
+            <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="textFieldP2Name" alignment="CENTER" layoutX="399.0" layoutY="21.0" promptText="Player 2 - Enter Name">
+      <TextField fx:id="textFieldP2Name" alignment="CENTER" layoutX="393.0" layoutY="23.0" promptText="Player 2 - Enter Name">
          <font>
-            <Font size="14.0" />
+            <Font size="15.0" />
          </font>
       </TextField>
-      <Label fx:id="labelP1Points" alignment="CENTER" layoutX="86.0" layoutY="61.0" text="POINTS:  0" textAlignment="CENTER" />
-      <Label fx:id="labelP2Points" alignment="CENTER" layoutX="458.0" layoutY="61.0" text="POINTS:  0" textAlignment="CENTER" />
-      <Label fx:id="labelP1Choice" layoutX="88.0" layoutY="293.0" text="P1 Choice" visible="false" />
-      <Label fx:id="labelP2Choice" layoutX="460.0" layoutY="293.0" text="P2 Choice" visible="false" />
-      <Label fx:id="labelSpacebar" alignment="CENTER" layoutX="132.0" layoutY="332.0" prefHeight="17.0" prefWidth="338.0" text="PRESS SPACEBAR TO START NEXT ROUND" textAlignment="CENTER" visible="false" />
+      <Label fx:id="labelSpacebar" alignment="CENTER" layoutX="132.0" layoutY="338.0" prefHeight="17.0" prefWidth="338.0" text="&lt;press spacebar to start next round&gt;" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
    </children>
 </AnchorPane>
