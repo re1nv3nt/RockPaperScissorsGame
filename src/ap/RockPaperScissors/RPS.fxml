@@ -61,7 +61,7 @@
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label fx:id="labelSpacebar" alignment="CENTER" layoutX="132.0" layoutY="297.0" prefHeight="17.0" prefWidth="338.0" text="&lt;press spacebar to start next round&gt;" textAlignment="CENTER">
+      <Label fx:id="labelSpacebar" alignment="CENTER" layoutX="132.0" layoutY="297.0" prefHeight="17.0" prefWidth="338.0" text="&lt;press spacebar to start next round&gt;" textAlignment="CENTER" visible="false">
          <font>
             <Font size="15.0" />
          </font></Label>
